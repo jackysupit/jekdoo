@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="view_view_form_inherit" model="ir.ui.view">
+            <field name="name">view_form.inherit</field>
+            <field name="model">ir.ui.view</field>
+            <field name="inherit_id" ref="base.view_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='active']" position="after">
+                    <button name="action_reset_hard" type="object" string="Hard Reset" class="btn btn-primary" 
+                    group="base.group_system"
+                    />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

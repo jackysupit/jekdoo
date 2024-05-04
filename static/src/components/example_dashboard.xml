@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="jekdoo.DashboardTemplate" owl="1">
+        <div class="vh-100 overflow-auto bg-muted">
+            <div class="row m-3">
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col m-0 p-0">
+                            <div class="shadow-sm border m-2 p-4 bg-white">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h1 class="text-primary fw-bold">BKI Dashboard</h1>
+                                    <div>
+                                        <select class="form-select">
+                                            <option value="0">Mei 2024</option>
+                                            <option value="7">Minggu Ini</option>
+                                            <option value="30">Bulan Kemarin</option>
+                                            <option value="365">Tahun Ini</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <KpiCard name="'Peserta Baru'" value="60" percentage="6"/>
+                        <KpiCard name="'Course Terjual'" value="20" percentage="20"/>
+                        <KpiCard name="'Revenue'" value="'30jt'" percentage="5"/>
+                        <KpiCard name="'Margin'" value="'20jt'" percentage="10"/>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 m-0 p-0">
+                            <div class="shadow-sm border m-2 p-4 bg-white">
+                                <div class="d-flex align-items-center justify-content-between d-none">
+                                    <h3 class="text-primary fw-bold">Top Course</h3>
+                                    <div class="px-3 py-1 bg-primary cursor-pointer">
+                                        <span class="fa fa-arrow-right text-white"/>
+                                    </div>
+                                </div>
+                                <ChartRenderer type="'doughnut'" title="'Course Yang Paling Diminati'"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 m-0 p-0">
+                            <div class="shadow-sm border m-2 p-4 bg-white">
+                                <div class="d-flex align-items-center justify-content-between  d-none">
+                                    <h3 class="text-primary fw-bold">Jumlah Peserta</h3>
+                                    <div class="px-3 py-1 bg-primary cursor-pointer">
+                                        <span class="fa fa-arrow-right text-white"/>
+                                    </div>
+                                </div>
+                                <ChartRenderer type="'pie'" title="'Jumlah Peserta'"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="row">
+                        <div class="col m-0 p-0">
+                            <div class="shadow-sm border m-2 p-4 bg-white">
+                                <div class="d-flex align-items-center justify-content-between  d-none">
+                                    <h3 class="text-primary fw-bold">Target Revenue vs Realisasi</h3>
+                                    <div class="px-3 py-1 bg-primary cursor-pointer">
+                                        <span class="fa fa-arrow-right text-white"/>
+                                    </div>
+                                </div>
+                                <ChartRenderer type="'bar'" title="'Target Revenue vs Realisasi'"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-0 p-0">
+                            <div class="shadow-sm border m-2 p-4 bg-white">
+                                <div class="d-flex align-items-center justify-content-between  d-none">
+                                    <h3 class="text-primary fw-bold">Margin Bulan Ini vs Bulan Lalu</h3>
+                                    <div class="px-3 py-1 bg-primary cursor-pointer">
+                                        <span class="fa fa-arrow-right text-white"/>
+                                    </div>
+                                </div>
+                                <ChartRenderer type="'line'" title="'Margin Bulan Ini'"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-3">
+                <div class="col-lg-7">
+                    <JekAccordion title="'Test Accordion'"/>
+                </div>
+            </div>
+            <div class="row m-3">
+                <div class="col-lg-7">
+                    .
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>
